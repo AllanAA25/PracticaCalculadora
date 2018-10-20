@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticaCalculadora"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Calculadora Geométrica" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="CALCULADORA DE PRÁCTICA GEOMÉTRICA" HorizontalAlignment="Center" Margin="169,29,356,0" VerticalAlignment="Top" Width="255" Grid.Column="1" Height="26"/>
+        <TextBox x:Name="txtValor1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="130,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Valor 1" Grid.Column="1" HorizontalAlignment="Left" Margin="64,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <ComboBox x:Name="cmbFigura" Grid.Column="1" HorizontalAlignment="Left" Margin="470,86,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Triángulo"/>
+            <ComboBoxItem Content="Cuadrado"/>
+            <ComboBoxItem Content="Rectangulo"/>
+            <ComboBoxItem Content="Rombo"/>
+            <ComboBoxItem Content="Polígono"/>
+            <ComboBoxItem Content="Trapecio"/>
+            <ComboBoxItem Content="Romboide"/>
+            <ComboBoxItem Content="Cilindro"/>
+            <ComboBoxItem Content="Esfera"/>
+            <ComboBoxItem Content="Cono"/>
+            <ComboBoxItem Content="Cubo"/>
+            <ComboBoxItem Content="Prisma"/>
+            <ComboBoxItem Content="Piramide"/>
+        </ComboBox>
+        <Label Content="Seleccione la figura que desea" Grid.Column="1" HorizontalAlignment="Left" Margin="279,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <TextBox x:Name="txtValor2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="130,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Valor 2" Grid.Column="1" HorizontalAlignment="Left" Margin="64,183,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <TextBox x:Name="txtValor3" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="130,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Valor 3" Grid.Column="1" HorizontalAlignment="Left" Margin="64,232,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <TextBox x:Name="txtValor4" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="130,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Valor 4" Grid.Column="1" HorizontalAlignment="Left" Margin="64,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <TextBox x:Name="txtValor5" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="130,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Valor 5" Grid.Column="1" HorizontalAlignment="Left" Margin="64,333,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.727,-0.147"/>
+        <Button x:Name="btnArea" Content="Área" Grid.Column="1" HorizontalAlignment="Left" Margin="300,180,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnArea_Copy" Content="Perimetro" Grid.Column="1" HorizontalAlignment="Left" Margin="300,232,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnArea_Copy1" Content="Volumen" Grid.Column="1" HorizontalAlignment="Left" Margin="300,280,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
