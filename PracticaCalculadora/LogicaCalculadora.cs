@@ -14,7 +14,7 @@ namespace PracticaCalculadora
         /// <param name="a">Lado a</param>
         /// <param name="b">Lado b</param>
         /// <param name="c">Lado c</param>
-        /// <returns>Perímetro del triángulo</returns>
+        /// <returns>Perímetro</returns>
         public double PerimetroTriangulo(double a, double b, double c)
         {
                 double perimetro = a + b + c;
@@ -27,7 +27,7 @@ namespace PracticaCalculadora
         /// <param name="a">Lado a</param>
         /// <param name="b">Lado b</param>
         /// <param name="c">Lado c</param>
-        /// <returns>Área del triángulo</returns>
+        /// <returns>Área</returns>
         public double AreaTriangulo(double a, double b, double c)
         {
                 double s = (a + b + c) / 2;
@@ -35,36 +35,70 @@ namespace PracticaCalculadora
                 return area;
         }
 
+        /// <summary>
+        /// Calcula el perímetro de un cuadrado válido.
+        /// </summary>
+        /// <param name="l">Lado</param>
+        /// <returns>Perímetro</returns>
         public double PerimetroCuadrado(double l)
         {
                 double perimetro = l * 4;
                 return perimetro;
         }
 
+        /// <summary>
+        /// Calcula el área de un cuadrado válido.
+        /// </summary>
+        /// <param name="l">Lado</param>
+        /// <returns>Área</returns>
         public double AreaCuadrado(double l)
         {
                 double area = l * l;
                 return area;
         }
 
+        /// <summary>
+        /// Calcula el perímetro de un rectangulo válido.
+        /// </summary>
+        /// <param name="a">Ancho</param>
+        /// <param name="l">Largo</param>
+        /// <returns>Perímetro</returns>
         public double PerimetroRectangulo(double a, double l)
         {
                 double perimetro = (a + l) * 2;
                 return perimetro;
         }
 
+        /// <summary>
+        /// Calcula el área de un rectangulo válido.
+        /// </summary>
+        /// <param name="a">Ancho</param>
+        /// <param name="l">Largo</param>
+        /// <returns>Área</returns>
         public double AreaRectangulo(double a, double l)
         {
                 double perimetro = a * l;
                 return perimetro;
         }
 
+        /// <summary>
+        /// Calcula el perímetro de un rectangulo válido.
+        /// </summary>
+        /// <param name="dMayor">Diagonal mayor</param>
+        /// <param name="dMenor">Diagonal menor</param>
+        /// <returns>Perímetro</returns>
         public double PerimetroRombo(double dMayor, double dMenor)
         {
                 double perimetro = 2 * Math.Sqrt(Math.Pow(dMayor, 2) + Math.Pow(dMenor, 2));
                 return perimetro;
         }
 
+        /// <summary>
+        /// Calcula el área de un rombo válido.
+        /// </summary>
+        /// <param name="dMayor">Diagonal mayor</param>
+        /// <param name="dMenor">Diagonal menor</param>
+        /// <returns>Área</returns>
         public double AreaRombo(double dMayor, double dMenor)
         {
                 double area = (dMayor*dMenor)/2;
