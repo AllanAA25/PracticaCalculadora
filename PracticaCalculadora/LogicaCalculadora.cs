@@ -21,6 +21,49 @@ namespace PracticaCalculadora
                 return perimetro;
         }
 
+        public double? AreaTriangulo(string text1, string text2, string text3, string text4, string text5)
+        {
+            double a = Double.Parse(text1);
+            double b = Double.Parse(text2);
+            double c = Double.Parse(text3);
+
+            if (ValidarTriangulo(a, b, c))
+            {
+                return AreaTriangulo(a, b, c);
+            }
+            else return null;
+        }
+
+        public double? AreaCuadrado(string text1, string text2, string text3, string text4, string text5)
+        {
+            double a = Double.Parse(text1);
+
+            if (a>0)
+            {
+                return AreaCuadrado(a);
+            }
+            else return null;
+        }
+
+        public double? CalcularArea(string text1, string text2, string text3, string text4, string text5, string figura)
+        {
+            EnumFiguras figurax = SeleccionFigura(figura);
+
+            double? resultado;
+
+            switch (figurax)
+            {
+                case EnumFiguras.Triangulo:
+                    resultado = AreaTriangulo(text1,text2,text3,text4,text5);
+                    return resultado;
+
+                case EnumFiguras.Cuadrado:
+                    resultado = AreaCuadrado(text1, text2, text3, text4, text5);
+                    return resultado;
+            }
+            return null;
+        }
+
         /// <summary>
         /// Calcula el área de un triángulo válido.
         /// </summary>
@@ -204,6 +247,66 @@ namespace PracticaCalculadora
         {
             return x >= 0;
         }
+
+        private EnumFiguras SeleccionFigura(string figura)
+        {
+            EnumFiguras resultado = EnumFiguras.Triangulo;
+            switch(figura)
+            {
+                case "Triángulo":
+                    resultado = EnumFiguras.Triangulo;
+                    return resultado;
+
+                case "Cuadrado":
+                    resultado = EnumFiguras.Cuadrado;
+                    return resultado;
+
+                case "Rectangulo":
+                    resultado = EnumFiguras.Rectangulo;
+                    return resultado;
+
+                case "Rombo":
+                    resultado = EnumFiguras.Rombo;
+                    return resultado;
+
+                case "Polígono":
+                    resultado = EnumFiguras.PoligonoReg;
+                    return resultado;
+
+                case "Trapecio":
+                    resultado = EnumFiguras.Trapecio;
+                    return resultado;
+
+                case "Romboide":
+                    resultado = EnumFiguras.Romboide;
+                    return resultado;
+
+                case "Cilindro":
+                    resultado = EnumFiguras.Cilindro;
+                    return resultado;
+                case "Esfera":
+                    resultado = EnumFiguras.Esfera;
+                    return resultado;
+                case "Cono":
+                    resultado = EnumFiguras.Cono;
+                    return resultado;
+                case "Cubo":
+                    resultado = EnumFiguras.Cubo;
+                    return resultado;
+                case "Prisma":
+                    resultado = EnumFiguras.Prisma;
+                    return resultado;
+                case "Piramide Cuadrada":
+                    resultado = EnumFiguras.PiramideCuadr;
+                    return resultado;
+                case "Piramide Poligonal":
+                    resultado = EnumFiguras.PiramidePolig;
+                    return resultado;
+            }
+            return resultado;
+
+        }
+
 
     }
 }

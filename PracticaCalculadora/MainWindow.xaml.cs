@@ -24,5 +24,14 @@ namespace PracticaCalculadora
         {
             InitializeComponent();
         }
+
+        LogicaCalculadora lc = new LogicaCalculadora();
+
+        private void CalcularArea(object sender, RoutedEventArgs e)
+        {
+            double? resultado = lc.CalcularArea(txtValor1.Text, txtValor2.Text, txtValor3.Text, txtValor4.Text, txtValor5.Text, cmbFigura.Text);
+            string resultadox = (resultado != null) ? resultado.ToString() : "Error";
+            txtResultado.Text = resultadox;
+        }
     }
 }
