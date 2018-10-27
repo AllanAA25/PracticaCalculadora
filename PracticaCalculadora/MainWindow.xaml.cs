@@ -33,5 +33,19 @@ namespace PracticaCalculadora
             string resultadox = (resultado != null) ? resultado.ToString() : "Error";
             txtResultado.Text = resultadox;
         }
+
+        private void CalcularPerimetro(object sender, RoutedEventArgs e)
+        {
+            double? resultado = lc.CalcularPerimetro(txtValor1.Text, txtValor2.Text, txtValor3.Text, txtValor4.Text, txtValor5.Text, cmbFigura.Text);
+            string resultadox = (resultado != null) ? resultado.ToString() : "Error";
+            txtResultado.Text = resultadox;
+        }
+
+        private void CalcularVolumen(object sender, RoutedEventArgs e)
+        {
+            double? resultado = lc.CalcularVolumen(txtValor1.Text, txtValor2.Text, txtValor3.Text, txtValor4.Text, txtValor5.Text, cmbFigura.Text);
+            string resultadox = (resultado != null) ? resultado.ToString() : "Error";
+            txtResultado.Text = resultadox;
+        }
     }
 }
